@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/test/test"
+  ],
+  "usingComponents": {
+    "van-button": "/wxcomponents/dist/button/index",
+    "van-tabbar": "/wxcomponents/dist/tabbar/index",
+    "van-tabbar-item": "/wxcomponents/dist/tabbar-item/index",
+    "van-row": "/wxcomponents/dist/row/index",
+    "van-col": "/wxcomponents/dist/col/index",
+    "van-image": "/wxcomponents/dist/image/index"
+  },
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "首页",
+  "navigationStyle": "default",
+  "usingComponents": {
+    "page1": "../../components/page1/page1",
+    "page2": "../../components/page2/page2",
+    "page3": "../../components/page3/page3",
+    "page4": "../../components/page4/page4"
+  }
+}
