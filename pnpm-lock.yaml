@@ -40,6 +40,9 @@ dependencies:
   '@dcloudio/uni-quickapp-webview':
     specifier: 3.0.0-3080420230531001
     version: registry.npmmirror.com/@dcloudio/uni-quickapp-webview@3.0.0-3080420230531001(postcss@8.4.24)(vue@3.3.4)
+  '@vant/area-data':
+    specifier: ^1.4.1
+    version: registry.npmmirror.com/@vant/area-data@1.4.1
   '@vant/weapp':
     specifier: ^1.10.19
     version: registry.npmmirror.com/@vant/weapp@1.10.19
@@ -3740,6 +3743,12 @@ packages:
     dependencies:
       '@types/yargs-parser': registry.npmmirror.com/@types/yargs-parser@21.0.0
     dev: true
+
+  registry.npmmirror.com/@vant/area-data@1.4.1:
+    resolution: {integrity: sha512-D8zI/rfxREhnIKGoYzsEJZ73fte4JARhFeFftLIH7ynu1sPrCBEgPkLEbwPyvw3VC4JdSIuzaK5uOhu+BcoPXw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vant/area-data/-/area-data-1.4.1.tgz}
+    name: '@vant/area-data'
+    version: 1.4.1
+    dev: false
 
   registry.npmmirror.com/@vant/weapp@1.10.19:
     resolution: {integrity: sha512-RStOPlSELi9lqim9dGagguViUVMNnfZaEceZ248JZgPjn5TzL2nwwHGWl9VI69SBPC+5MPS+LXm7Z4jcdscFeg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vant/weapp/-/weapp-1.10.19.tgz}

@@ -1,6 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "page1-user": "../page1-user/page1-user"
-  }
-}

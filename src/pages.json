@@ -1,17 +1,24 @@
 {
   "pages": [
     {
+      "path": "pages/select-location/select-location",
+      "style": {
+        "navigationBarTitleText": "选择地址",
+        "navigationStyle": "default"
+      }
+    },
+    {
       "path": "pages/index/index",
       "style": {
         "navigationBarTitleText": "首页",
-        "navigationStyle": "default"
+        "navigationStyle": "custom"
       }
     },
     {
       "path": "pages/test/test",
       "style": {
         "navigationBarTitleText": "test",
-        "navigationStyle": "custom"
+        "navigationStyle": "default"
       }
     }
   ],
@@ -26,7 +33,13 @@
       "van-tabbar-item": "/wxcomponents/dist/tabbar-item/index",
       "van-row": "/wxcomponents/dist/row/index",
       "van-col": "/wxcomponents/dist/col/index",
-      "van-image": "/wxcomponents/dist/image/index"
+      "van-image": "/wxcomponents/dist/image/index",
+      "van-tag": "/wxcomponents/dist/tag/index",
+      "van-tab": "/wxcomponents/dist/tab/index",
+      "van-tabs": "/wxcomponents/dist/tabs/index",
+      "van-area": "/wxcomponents/dist/area/index",
+      "van-search": "/wxcomponents/dist/search/index",
+      "van-popup": "/wxcomponents/dist/popup/index"
     }
   },
   "renderer": "skyline",
