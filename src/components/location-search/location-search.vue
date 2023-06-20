@@ -1,57 +1,79 @@
 <script setup>
-import { ref, toRefs } from "vue";
+import { ref } from "vue";
 import { storeToRefs } from "pinia";
-import { useSelectLocation } from "../../stores/store";
+import { useMapLocation } from "../../stores/store";
+import promisify from "../../utils/promisify";
+import { moveTo, pointToStr } from "../../utils/map";
 
-const { location } = storeToRefs(useSelectLocation());
+const { currentPoint, location } = storeToRefs(useMapLocation());
 const props = defineProps({
-  searchStr: String,
-  location: String,
   setShowChooseCity: Function,
 });
-const { searchStr } = toRefs(props);
+const searchStr = ref("");
+const input = ref(null);
 
-function onChange(e) {
-  console.log(e);
-}
-
-function onSearch(e) {
-  console.log(e);
+async function onFocus(e) {
+  const targetLocation = await promisify(uni.chooseLocation, uni)();
+  const locationStr = (await pointToStr(targetLocation)).result.ad_info;
+  location.value = [
+    { name: locationStr.province, code: locationStr.adcode.slice(0, 2) },
+    { name: locationStr.city, code: locationStr.adcode.slice(0, 4) },
+    { name: locationStr.district, code: locationStr.adcode },
+  ];
+  currentPoint.value = {
+    longitude: targetLocation.longitude,
+    latitude: targetLocation.latitude,
+  };
+  e.target.value = targetLocation.name;
+  searchStr.value = targetLocation.name;
+  await moveTo(targetLocation);
 }
 </script>
 
 <template>
-  <van-search
-    :value="searchStr"
-    placeholder="请输入搜索地址"
-    :left-icon="false"
-    @change="onChange"
-    @search="onSearch"
-  >
-    <!--    <template v-slot:action>-->
-    <!--      <view @tap="onClick">搜索</view>-->
-    <!--    </template>-->
-    <template v-slot:label>
-      <view class="container" @tap="setShowChooseCity(true)">
-        <text class="city-text">{{ location.at(-1).name }}</text>
-        <image class="down-arrow" src="../../static/down-arrow.png"></image>
-      </view>
-    </template>
-  </van-search>
+  <view class="container">
+    <view class="msg-container" @click="props.setShowChooseCity(true)">
+      <view class="city-text">{{ location.at(-1).name }}</view>
+      <image class="down-arrow" src="../../static/down-arrow.png"></image>
+    </view>
+    <input
+      ref="input"
+      class="input"
+      v-model="searchStr"
+      placeholder="请输入搜索地址"
+      @focus="onFocus"
+    />
+  </view>
 </template>
 
 <style scoped lang="scss">
 .container {
-  .city-text {
-    font-size: 14px;
-    line-height: 36px;
+  display: flex;
+  border: 20rpx solid rgb(255, 255, 255);
+  background-color: rgb(245, 245, 245);
+  height: 75rpx;
+
+  .msg-container {
+    display: flex;
+    height: 75rpx;
+    justify-content: center;
+    align-items: center;
+    width: 150rpx;
+
+    .city-text {
+      font-size: 14px;
+    }
+
+    .down-arrow {
+      width: 10px;
+      height: 10px;
+      margin-left: 5px;
+    }
   }
 
-  .down-arrow {
-    width: 10px;
-    height: 10px;
-    margin-left: 5px;
-    margin-top: 13px;
+  .input {
+    height: 75rpx;
+    width: 100%;
   }
 }
 </style>

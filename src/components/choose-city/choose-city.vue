@@ -2,16 +2,23 @@
 import { areaList } from "@vant/area-data";
 import { toRefs } from "vue";
 import { storeToRefs } from "pinia";
-import { useSelectLocation } from "../../stores/store";
+import { useMapLocation } from "../../stores/store";
+import { strToPoint } from "../../utils/map";
+import { moveTo } from "../../utils/map";
 
-const { location } = storeToRefs(useSelectLocation());
+const { currentPoint, location } = storeToRefs(useMapLocation());
 const props = defineProps({
   showChooseCity: Boolean,
   setShowChooseCity: Function,
 });
 const { showChooseCity, setShowChooseCity } = toRefs(props);
-const onConfirm = (e) => {
+const onConfirm = async (e) => {
   location.value = e.detail.values;
+  const resultPoint = await strToPoint(
+    e.detail.values[0].name + e.detail.values[1].name + e.detail.values[2].name
+  );
+  currentPoint.value = resultPoint;
+  await moveTo(resultPoint);
   setShowChooseCity.value(false);
 };
 </script>

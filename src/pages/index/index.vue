@@ -24,11 +24,11 @@
 </template>
 
 <script setup>
-import { useSelectLocation, usePage } from "../../stores/store";
+import { useSelectLocation, usePage, useMapLocation } from "../../stores/store";
 import { storeToRefs } from "pinia";
 
 const currentPage = usePage();
-const { isSelectedLocation } = storeToRefs(useSelectLocation());
+const { isSelectedLocation } = storeToRefs(useMapLocation());
 const onChange = (e) => {
   if (e.detail === 2 && !isSelectedLocation.value) {
     if (!isSelectedLocation.value) {

@@ -6,27 +6,18 @@ export const usePage = defineStore("page", {
     page: 1,
   }),
 });
-export const useSelectLocation = defineStore("selectLocation", {
+export const useMapLocation = defineStore("mapLocation", {
   state: () => ({
     isSelectedLocation: false,
     location: [{ code: "110000", name: "北京" }],
-  }),
-  actions: {
-    setLocation(location) {
-      this.isSelectedLocation = true;
-      this.location = location;
-    },
-  },
-});
-export const useMapLocation = defineStore("mapLocation", {
-  state: () => ({
     currentPoint: {
       latitude: 0,
       longitude: 0,
     },
-    targetPoint: {
-      latitude: 0,
-      longitude: 0,
-    },
+  }),
+});
+export const useStore = defineStore("store", {
+  state: () => ({
+    currentStore: {},
   }),
 });

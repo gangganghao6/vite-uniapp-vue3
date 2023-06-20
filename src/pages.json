@@ -20,6 +20,13 @@
         "navigationBarTitleText": "test",
         "navigationStyle": "default"
       }
+    },
+    {
+      "path": "pages/address/address",
+      "style": {
+        "navigationBarTitleText": "test",
+        "navigationStyle": "default"
+      }
     }
   ],
   "globalStyle": {
