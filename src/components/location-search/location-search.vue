@@ -1,25 +1,21 @@
 <script setup>
+//到店位置选择组件
 import { ref } from "vue";
 import { storeToRefs } from "pinia";
 import { useMapLocation } from "../../stores/store";
-import promisify from "../../utils/promisify";
-import { moveTo, pointToStr } from "../../utils/map";
+import { chooseLocation, moveTo, pointToStr } from "../../utils/map";
 
-const { currentPoint, location } = storeToRefs(useMapLocation());
+const { currentPoint, location, searchStr } = storeToRefs(useMapLocation());
 const props = defineProps({
   setShowChooseCity: Function,
 });
-const searchStr = ref("");
-const input = ref(null);
+const input = ref(null); //获取input元素
+const emit = defineEmits(["setShowChooseCity"]);
 
 async function onFocus(e) {
-  const targetLocation = await promisify(uni.chooseLocation, uni)();
-  const locationStr = (await pointToStr(targetLocation)).result.ad_info;
-  location.value = [
-    { name: locationStr.province, code: locationStr.adcode.slice(0, 2) },
-    { name: locationStr.city, code: locationStr.adcode.slice(0, 4) },
-    { name: locationStr.district, code: locationStr.adcode },
-  ];
+  //点击input组件后跳转到微信位置选择器，选择后定位到该位置
+  const targetLocation = await chooseLocation();
+  location.value = await pointToStr(targetLocation);
   currentPoint.value = {
     longitude: targetLocation.longitude,
     latitude: targetLocation.latitude,
@@ -32,16 +28,17 @@ async function onFocus(e) {
 
 <template>
   <view class="container">
-    <view class="msg-container" @click="props.setShowChooseCity(true)">
+    <view class="msg-container" @click="emit('setShowChooseCity', true)">
       <view class="city-text">{{ location.at(-1).name }}</view>
       <image class="down-arrow" src="../../static/down-arrow.png"></image>
     </view>
     <input
+      disabled
       ref="input"
       class="input"
       v-model="searchStr"
       placeholder="请输入搜索地址"
-      @focus="onFocus"
+      @click="onFocus"
     />
   </view>
 </template>
@@ -61,7 +58,8 @@ async function onFocus(e) {
     width: 150rpx;
 
     .city-text {
-      font-size: 14px;
+      font-size: 12px;
+      font-weight: bold;
     }
 
     .down-arrow {
@@ -74,6 +72,7 @@ async function onFocus(e) {
   .input {
     height: 75rpx;
     width: 100%;
+    font-size: 12px;
   }
 }
 </style>

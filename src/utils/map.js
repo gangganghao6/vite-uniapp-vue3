@@ -20,24 +20,6 @@ export async function moveTo({ latitude, longitude }) {
   });
 }
 
-export async function refreshLocationStr({ latitude, longitude }, location) {
-  const result = await pointToStr({ latitude, longitude });
-  location.value = [
-    {
-      name: result.result.ad_info.province,
-      code: result.result.ad_info.adcode.slice(0, 2) + "0000",
-    },
-    {
-      name: result.result.ad_info.city,
-      code: result.result.ad_info.adcode.slice(0, 4) + "00",
-    },
-    {
-      name: result.result.ad_info.district,
-      code: result.result.ad_info.adcode,
-    },
-  ];
-}
-
 export async function getCurrentPoint() {
   return await promisify(uni.getLocation)({
     type: "gcj02",
@@ -45,15 +27,25 @@ export async function getCurrentPoint() {
 }
 
 export async function pointToStr({ latitude, longitude }) {
-  return await promisify(
-    qqmapsdk.reverseGeocoder,
-    qqmapsdk
-  )({
-    location: {
-      latitude,
-      longitude,
+  const locationStr = (
+    await promisify(
+      qqmapsdk.reverseGeocoder,
+      qqmapsdk
+    )({
+      location: {
+        latitude,
+        longitude,
+      },
+    })
+  ).result.ad_info;
+  return [
+    {
+      name: locationStr.province,
+      code: locationStr.adcode.slice(0, 2) + "0000",
     },
-  });
+    { name: locationStr.city, code: locationStr.adcode.slice(0, 4) + "00" },
+    { name: locationStr.district, code: locationStr.adcode },
+  ];
 }
 
 export async function strToPoint(str) {
@@ -75,4 +67,12 @@ export async function goTo(store) {
   await uni.openLocation({
     ...store,
   });
+}
+
+export async function chooseAddress() {
+  return await uni.chooseAddress();
+}
+
+export async function chooseLocation() {
+  return await uni.chooseLocation();
 }

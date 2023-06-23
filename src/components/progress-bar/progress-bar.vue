@@ -1,22 +1,24 @@
 <script setup>
-import {computed} from "vue";
+//用户等级进度条组件
+import { computed } from "vue";
 
 const props = defineProps({
   progressNum: {
     type: Number,
-    default: 0
-  }
-})
-const progressNumWidth = computed(() => Math.floor(props.progressNum / 1000 * 100))
-
+    default: 0,
+  },
+});
+const progressNumWidth = computed(() =>
+  Math.floor((props.progressNum / 1000) * 100)
+);
 </script>
 
 <template>
   <view class="container">
     <view class="progress-container">
-      <view class="progress" :style="{width:`${progressNumWidth}%`}"></view>
+      <view class="progress" :style="{ width: `${progressNumWidth}%` }"></view>
     </view>
-    <view class="progress-num-container">{{props.progressNum}}/1000</view>
+    <view class="progress-num-container">{{ props.progressNum }}/1000</view>
   </view>
 </template>
 

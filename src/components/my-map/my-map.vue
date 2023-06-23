@@ -1,29 +1,26 @@
 <script setup>
+//地图组件
 import { getCurrentInstance } from "vue";
 import { storeToRefs } from "pinia";
 import { useMapLocation } from "../../stores/store";
 import { onLoad } from "@dcloudio/uni-app";
-import {
-  getCurrentPoint,
-  initMap,
-  moveTo,
-  refreshLocationStr,
-} from "../../utils/map";
+import { getCurrentPoint, initMap, moveTo, pointToStr } from "../../utils/map";
 
 const { currentPoint, location } = storeToRefs(useMapLocation());
 let mapInstance = uni.createMapContext("map-instance", getCurrentInstance());
 
 const resetMap = async () => {
+  //重置地图，使其回到当前位置
   const tempPoint = await getCurrentPoint();
   await moveTo(tempPoint);
-  await refreshLocationStr(tempPoint, location);
+  location.value = await pointToStr(tempPoint);
   currentPoint.value = {
     longitude: tempPoint.longitude,
     latitude: tempPoint.latitude,
   };
 };
 onLoad(async () => {
-  initMap(mapInstance);
+  initMap(mapInstance); //初始化地图，将地图实例传给map.js中
   await resetMap();
 });
 </script>
@@ -46,7 +43,7 @@ onLoad(async () => {
 .map-instance {
   width: 750rpx;
   height: 750rpx;
-
+  z-index: 1000 !important;
   .map-button-container {
     width: 75rpx;
     height: 75rpx;

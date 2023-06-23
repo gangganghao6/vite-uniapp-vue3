@@ -1,24 +1,19 @@
 <script setup>
-import {ref} from "vue";
+//首页的用户头像等组件
+import { ref } from "vue";
 
-const progressNum = ref(999)
-setTimeout(() => {
-  progressNum.value = 500
-}, 1000)
+const progressNum = ref(999);
 </script>
 
 <template>
   <view class="container">
-    <image
-        src="/static/logo.png"
-        class="avatar"
-    />
+    <image src="/static/logo.png" class="avatar" />
     <view class="progress">
       <view class="user-name">
         微信用户
         <van-tag plain class="level" type="primary">lv1</van-tag>
       </view>
-      <progress-bar :progressNum="progressNum"/>
+      <progress-bar :progressNum="progressNum" />
     </view>
     <view class="jifen">
       <view>积分</view>
@@ -40,7 +35,7 @@ setTimeout(() => {
   display: flex;
   align-items: center;
   justify-content: space-around;
-
+  border-radius: 6px;
   .avatar {
     border-radius: 50%;
     width: 70rpx;
@@ -67,7 +62,8 @@ setTimeout(() => {
     margin-right: -30rpx;
   }
 
-  .jifen, .youhuiquan {
+  .jifen,
+  .youhuiquan {
     display: flex;
     flex-direction: column;
     justify-content: center;

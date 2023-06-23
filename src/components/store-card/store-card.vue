@@ -1,39 +1,55 @@
 <script setup>
-import { goTo, pointToStr } from "../../utils/map";
+//商铺卡片组件
+import { goTo, moveTo, pointToStr } from "../../utils/map";
 import { toRefs } from "vue";
-import { moveTo } from "../../utils/map";
-import { useMapLocation } from "../../stores/store";
+import { useMapLocation, useStore } from "../../stores/store";
+import { storeToRefs } from "pinia";
 
-const { currentPoint, location } = useMapLocation();
+const { currentPoint, location, isSelectedLocation } = storeToRefs(
+  useMapLocation()
+);
+const { currentStore } = storeToRefs(useStore());
 const props = defineProps({
   store: Object,
 });
 const { store } = toRefs(props);
 
 async function onMove() {
-  const locationStr = (await pointToStr(store.value)).result.ad_info;
-  location.value = [
-    { name: locationStr.province, code: locationStr.adcode.slice(0, 2) },
-    { name: locationStr.city, code: locationStr.adcode.slice(0, 4) },
-    { name: locationStr.district, code: locationStr.adcode },
-  ];
+  //点击商铺卡片，移动到商铺位置
+  location.value = await pointToStr(store.value);
   currentPoint.value = {
     longitude: store.value.longitude,
     latitude: store.value.latitude,
   };
+  isSelectedLocation.value = true;
+  currentStore.value = store;
   await moveTo(store.value);
+}
+
+function goToStore() {
+  uni.redirectTo({
+    url: "/pages/index/index?index=2",
+  });
 }
 </script>
 
 <template>
   <view class="container" @click="onMove">
     <view class="left">
-      <text class="name">{{ store.name }}</text>
-      <text class="address">{{ store.address }}</text>
-      <text class="time">{{ store.startTime }}-{{ store.endTime }} 已休息</text>
+      <view class="name">{{ store.name }}</view>
+      <view class="address">{{ store.address }}</view>
+      <view class="time">
+        {{ store.startTime }}-{{ store.endTime }} 已休息
+        <view class="distance">
+          <van-icon name="location" />
+          {{ store.distance }}
+        </view>
+      </view>
     </view>
     <view class="right">
-      <text class="distance">{{ store.distance }}</text>
+      <van-button round type="info" size="small" class="but" @click="goToStore">
+        去下单
+      </van-button>
       <view class="button-container">
         <view class="single-container">
           <image
@@ -76,6 +92,13 @@ async function onMove() {
     .time {
       font-size: 13px;
     }
+
+    .distance {
+      text-align: right;
+      font-size: 14px;
+      color: rgba(0, 89, 255, 0.97);
+      display: inline-block;
+    }
   }
 
   .right {
@@ -83,15 +106,12 @@ async function onMove() {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-
-    .distance {
-      text-align: right;
-      font-size: 13px;
-    }
+    align-items: center;
 
     .button-container {
       display: flex;
       justify-content: space-around;
+      width: 200rpx;
 
       .single-container {
         width: 40rpx;

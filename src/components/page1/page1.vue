@@ -1,11 +1,13 @@
 <script setup>
 function switchToShop() {
+  //跳转到店铺页面（不是最终形式，要改）
   uni.navigateTo({
     url: "/pages/shop/shop",
   });
 }
 
 function getImages() {
+  //获取首页图片
   return [
     {
       url: "https://img.yzcdn.cn/vant/cat.jpeg",
