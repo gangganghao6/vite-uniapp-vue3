@@ -2,8 +2,8 @@
 //到店位置选择组件
 import { ref } from "vue";
 import { storeToRefs } from "pinia";
-import { useMapLocation } from "../../stores/store";
-import { chooseLocation, moveTo, pointToStr } from "../../utils/map";
+import { useMapLocation } from "../../../stores/store";
+import { chooseLocation, moveTo, pointToStr } from "../../../utils/map";
 
 const { currentPoint, location, searchStr } = storeToRefs(useMapLocation());
 const props = defineProps({

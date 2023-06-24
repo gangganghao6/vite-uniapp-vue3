@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+import OrderLocation from "./order-location/order-location.vue";
+import GoodsType from "./goods-type/goods-type.vue";
+import GoodsContainer from "./goods-container/goods-container.vue";
+</script>
 
 <template>
   <view class="container">
@@ -6,13 +10,9 @@
       <view class="nav"></view>
       <order-location />
     </van-sticky>
-    <!--    <van-row>-->
-    <!--      <van-col span="5">-->
     <view class="type-container">
       <goods-type />
     </view>
-    <!--      </van-col>-->
-    <!--      <van-col span="19">-->
     <view class="goods-container">
       <goods-container />
       <goods-container />
@@ -23,8 +23,6 @@
       <goods-container />
       <goods-container />
     </view>
-    <!--      </van-col>-->
-    <!--    </van-row>-->
   </view>
 </template>
 
@@ -53,7 +51,7 @@
     position: absolute;
     right: 0;
     overflow: scroll;
-    height: calc(100vh - 150rpx - 330rpx);
+    height: calc(100vh - 150rpx - 350rpx);
     padding-bottom: 70px;
   }
 }

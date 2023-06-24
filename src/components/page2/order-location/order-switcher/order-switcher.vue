@@ -34,19 +34,19 @@ function onWaisong() {
   margin: 20rpx 0 0 30rpx;
   display: flex;
   width: 160rpx;
-  border-radius: 15px;
+  border-radius: 30rpx;
   height: 50rpx;
   background-color: rgb(237, 237, 237);
 
   .daodian-container,
   .waimai-container {
     padding: 10rpx;
-    font-size: 13px;
+    font-size: 26rpx;
     width: 60rpx;
     line-height: 30rpx;
     font-weight: bold;
     color: black;
-    border-radius: 15px;
+    border-radius: 30rpx;
   }
 }
 .daodian,

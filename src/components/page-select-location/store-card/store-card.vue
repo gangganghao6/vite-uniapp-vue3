@@ -1,8 +1,8 @@
 <script setup>
 //商铺卡片组件
-import { goTo, moveTo, pointToStr } from "../../utils/map";
+import { goTo, moveTo, pointToStr } from "../../../utils/map";
 import { toRefs } from "vue";
-import { useMapLocation, useStore } from "../../stores/store";
+import { useMapLocation, useStore } from "../../../stores/store";
 import { storeToRefs } from "pinia";
 
 const { currentPoint, location, isSelectedLocation } = storeToRefs(

@@ -1,7 +1,9 @@
 <script setup>
-import { useStore } from "../../stores/store";
+import { useStore } from "../../../stores/store";
 import { storeToRefs } from "pinia";
 import { ref } from "vue";
+import OrderPop from "./order-pop/order-pop.vue";
+import OrderSwitcher from "./order-switcher/order-switcher.vue";
 
 const { currentStore } = storeToRefs(useStore());
 const isDetailShow = ref(false);
@@ -49,7 +51,7 @@ const changeDetailPop = (e) => {
       display: flex;
       .name {
         //超过一行省略号
-        font-size: large;
+        font-size: 36rpx;
         font-weight: bold;
         margin-right: 20rpx;
         overflow: hidden;
@@ -59,7 +61,7 @@ const changeDetailPop = (e) => {
     }
     .location-container {
       margin-top: 20rpx;
-      font-size: 14px;
+      font-size: 28rpx;
       color: rgb(143, 143, 143);
       .location {
         overflow: hidden;
@@ -76,7 +78,7 @@ const changeDetailPop = (e) => {
   display: flex;
   justify-content: space-between;
   padding: 11rpx 10rpx 0 10rpx;
-  font-size: 13px;
+  font-size: 26rpx;
   color: rgb(143, 143, 143);
   background-color: #fff;
 }

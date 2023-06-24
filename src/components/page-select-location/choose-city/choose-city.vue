@@ -3,9 +3,9 @@
 import { areaList } from "@vant/area-data";
 import { toRefs } from "vue";
 import { storeToRefs } from "pinia";
-import { useMapLocation } from "../../stores/store";
-import { strToPoint } from "../../utils/map";
-import { moveTo } from "../../utils/map";
+import { useMapLocation } from "../../../stores/store";
+import { strToPoint } from "../../../utils/map";
+import { moveTo } from "../../../utils/map";
 
 const { currentPoint, location } = storeToRefs(useMapLocation());
 const props = defineProps({

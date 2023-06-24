@@ -1,6 +1,7 @@
 <script setup>
 //首页的用户头像等组件
 import { ref } from "vue";
+import ProgressBar from "./progress-bar/progress-bar.vue";
 
 const progressNum = ref(999);
 </script>
@@ -11,7 +12,7 @@ const progressNum = ref(999);
     <view class="progress">
       <view class="user-name">
         微信用户
-        <van-tag plain class="level" type="primary">lv1</van-tag>
+        <van-tag plain type="primary">lv1</van-tag>
       </view>
       <progress-bar :progressNum="progressNum" />
     </view>
@@ -35,7 +36,7 @@ const progressNum = ref(999);
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border-radius: 6px;
+  border-radius: 12rpx;
   .avatar {
     border-radius: 50%;
     width: 70rpx;
@@ -53,8 +54,8 @@ const progressNum = ref(999);
 
     .user-name {
       font-weight: bolder;
-      font-size: 14px;
-      margin-bottom: 3px;
+      font-size: 28rpx;
+      margin-bottom: 6rpx;
     }
   }
 
@@ -68,8 +69,8 @@ const progressNum = ref(999);
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    font-size: small;
     height: 100%;
+    font-size: 28rpx;
   }
 }
 </style>

@@ -20,6 +20,13 @@
         "navigationBarTitleText": "搜索商品",
         "navigationStyle": "default"
       }
+    },
+    {
+      "path": "pages/goods-package-detail/goods-package-detail",
+      "style": {
+        "navigationBarTitleText": "商品套餐",
+        "navigationStyle": "custom"
+      }
     }
   ],
   "globalStyle": {

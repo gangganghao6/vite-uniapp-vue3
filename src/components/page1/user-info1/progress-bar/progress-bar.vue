@@ -46,7 +46,7 @@ $progress-height: 6px;
 
   .progress-num-container {
     width: 20%;
-    font-size: 10px;
+    font-size: 20rpx;
     display: inline-block;
   }
 }

@@ -1,6 +1,6 @@
 <script setup>
 //外送位置选择组件（展示）
-import { useMapLocation } from "../../stores/store";
+import { useMapLocation } from "../../../stores/store";
 import { storeToRefs } from "pinia";
 
 const emit = defineEmits(["selectLocation"]);

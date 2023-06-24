@@ -1,4 +1,6 @@
 <script setup>
+import UserInfo1 from "./user-info1/user-info1.vue";
+
 function switchToShop() {
   //跳转到店铺页面（不是最终形式，要改）
   uni.navigateTo({
@@ -47,7 +49,7 @@ function getImages() {
 <style scoped lang="scss">
 $button-height: 200rpx;
 .container {
-  padding-bottom: 50px;
+  padding-bottom: 180rpx;
 
   .backgroung-image {
     width: 750rpx;

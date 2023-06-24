@@ -1,5 +1,5 @@
 <script setup>
-import { useStore } from "../../stores/store";
+import { useStore } from "../../../../stores/store";
 import { storeToRefs } from "pinia";
 
 const { currentStore } = storeToRefs(useStore());
@@ -44,7 +44,7 @@ const onClose = () => {
   }
 
   .msg-container {
-    font-size: 13px;
+    font-size: 26rpx;
     //自动换行
     word-wrap: break-word;
     word-break: break-all;

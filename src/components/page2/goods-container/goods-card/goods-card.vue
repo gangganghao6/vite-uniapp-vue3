@@ -30,7 +30,7 @@
   margin: 20rpx;
   display: flex;
   box-shadow: #bbbaba -1px 1px 3px 0px;
-  border-radius: 6px;
+  border-radius: 12rpx;
 
   .image {
     height: 100%;
@@ -44,14 +44,14 @@
     height: 100%;
 
     .detail {
-      margin: 5px 10px 5px 10px;
+      margin: 10rpx 20rpx 10rpx 20rpx;
       //超出两行省略号
     }
 
     .name {
-      font-size: 14px;
+      font-size: 28rpx;
       font-weight: bold;
-      letter-spacing: 1px;
+      letter-spacing: 2rpx;
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box;
@@ -62,9 +62,9 @@
 
     .vip {
       background-color: rgb(255, 220, 152);
-      font-size: 9px;
+      font-size: 18rpx;
       font-weight: bold;
-      border-radius: 15px;
+      border-radius: 30rpx;
       padding-left: 10rpx;
       display: flex;
       width: 50%;
@@ -73,7 +73,7 @@
       align-items: center;
 
       .vip-icon {
-        margin-right: 3px;
+        margin-right: 6rpx;
       }
 
       .vip-price {
@@ -83,23 +83,23 @@
 
     .chuzhi {
       display: flex;
-      font-size: 9px;
+      font-size: 18rpx;
 
       .chuzhi-price {
         color: rgb(255, 84, 134);
-        border: 1px solid rgb(255, 84, 134);
+        border: 1rpx solid rgb(255, 84, 134);
       }
 
       .chuzhi-text {
         color: white;
         background-color: rgb(255, 84, 134);
-        border: 1px solid rgb(255, 84, 134);
+        border: 1rpx solid rgb(255, 84, 134);
       }
 
       .chuzhi-price,
       .chuzhi-text {
         line-height: 30rpx;
-        padding: 0 2px 0 2px;
+        padding: 0 4rpx 0 4rpx;
       }
     }
 
@@ -107,7 +107,7 @@
       display: flex;
       justify-content: space-between;
       .price {
-        font-size: 14px;
+        font-size: 28rpx;
         font-weight: bold;
       }
       .button {
@@ -115,8 +115,8 @@
         width: 100rpx;
         background-color: red;
         color: white;
-        border-radius: 15px;
-        font-size: 11px;
+        border-radius: 30rpx;
+        font-size: 22rpx;
         text-align: center;
         line-height: 40rpx;
       }

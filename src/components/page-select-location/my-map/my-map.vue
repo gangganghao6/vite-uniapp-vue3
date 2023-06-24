@@ -2,9 +2,14 @@
 //地图组件
 import { getCurrentInstance } from "vue";
 import { storeToRefs } from "pinia";
-import { useMapLocation } from "../../stores/store";
+import { useMapLocation } from "../../../stores/store";
 import { onLoad } from "@dcloudio/uni-app";
-import { getCurrentPoint, initMap, moveTo, pointToStr } from "../../utils/map";
+import {
+  getCurrentPoint,
+  initMap,
+  moveTo,
+  pointToStr,
+} from "../../../utils/map";
 
 const { currentPoint, location } = storeToRefs(useMapLocation());
 let mapInstance = uni.createMapContext("map-instance", getCurrentInstance());
