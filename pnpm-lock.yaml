@@ -3025,7 +3025,7 @@ packages:
       '@jimp/custom': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
       '@jimp/utils': registry.npmmirror.com/@jimp/utils@0.10.3
       bmp-js: registry.npmmirror.com/bmp-js@0.1.0
       core-js: registry.npmmirror.com/core-js@3.30.2
@@ -3052,7 +3052,7 @@ packages:
 
   registry.npmmirror.com/@jimp/custom@0.10.3:
     resolution: {integrity: sha512-nZmSI+jwTi5IRyNLbKSXQovoeqsw+D0Jn0SxW08wYQvdkiWA8bTlDQFgQ7HVwCAKBm8oKkDB/ZEo9qvHJ+1gAQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@jimp/custom/-/custom-0.10.3.tgz}
-    name: '@jimp/custom'
+    name: '@jimp/single-custom'
     version: 0.10.3
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
@@ -3069,7 +3069,7 @@ packages:
       '@jimp/custom': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
       '@jimp/utils': registry.npmmirror.com/@jimp/utils@0.10.3
       core-js: registry.npmmirror.com/core-js@3.30.2
       omggif: registry.npmmirror.com/omggif@1.0.10
@@ -3084,7 +3084,7 @@ packages:
       '@jimp/custom': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
       '@jimp/utils': registry.npmmirror.com/@jimp/utils@0.10.3
       core-js: registry.npmmirror.com/core-js@3.30.2
       jpeg-js: registry.npmmirror.com/jpeg-js@0.3.7
@@ -3099,7 +3099,7 @@ packages:
       '@jimp/custom': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
       '@jimp/utils': registry.npmmirror.com/@jimp/utils@0.10.3
       core-js: registry.npmmirror.com/core-js@3.30.2
     dev: false
@@ -3113,7 +3113,7 @@ packages:
       '@jimp/custom': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
       '@jimp/utils': registry.npmmirror.com/@jimp/utils@0.10.3
       core-js: registry.npmmirror.com/core-js@3.30.2
     dev: false
@@ -3127,7 +3127,7 @@ packages:
       '@jimp/custom': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
       '@jimp/utils': registry.npmmirror.com/@jimp/utils@0.10.3
       core-js: registry.npmmirror.com/core-js@3.30.2
     dev: false
@@ -3141,7 +3141,7 @@ packages:
       '@jimp/custom': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
       '@jimp/utils': registry.npmmirror.com/@jimp/utils@0.10.3
       core-js: registry.npmmirror.com/core-js@3.30.2
       tinycolor2: registry.npmmirror.com/tinycolor2@1.6.0
@@ -3159,10 +3159,10 @@ packages:
       '@jimp/plugin-scale': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
-      '@jimp/plugin-blit': registry.npmmirror.com/@jimp/plugin-blit@0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-resize': registry.npmmirror.com/@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-scale': registry.npmmirror.com/@jimp/plugin-scale@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-resize@0.10.3)
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
+      '@jimp/plugin-blit': registry.npmmirror.com/@jimp/plugin-blit@0.10.3(@jimp/single-custom@0.10.3)
+      '@jimp/plugin-resize': registry.npmmirror.com/@jimp/plugin-resize@0.10.3(@jimp/single-custom@0.10.3)
+      '@jimp/plugin-scale': registry.npmmirror.com/@jimp/plugin-scale@0.10.3(@jimp/single-custom@0.10.3)(@jimp/plugin-resize@0.10.3)
       '@jimp/utils': registry.npmmirror.com/@jimp/utils@0.10.3
       core-js: registry.npmmirror.com/core-js@3.30.2
     dev: false
@@ -3179,10 +3179,10 @@ packages:
       '@jimp/plugin-scale': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
-      '@jimp/plugin-crop': registry.npmmirror.com/@jimp/plugin-crop@0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-resize': registry.npmmirror.com/@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-scale': registry.npmmirror.com/@jimp/plugin-scale@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-resize@0.10.3)
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
+      '@jimp/plugin-crop': registry.npmmirror.com/@jimp/plugin-crop@0.10.3(@jimp/single-custom@0.10.3)
+      '@jimp/plugin-resize': registry.npmmirror.com/@jimp/plugin-resize@0.10.3(@jimp/single-custom@0.10.3)
+      '@jimp/plugin-scale': registry.npmmirror.com/@jimp/plugin-scale@0.10.3(@jimp/single-custom@0.10.3)(@jimp/plugin-resize@0.10.3)
       '@jimp/utils': registry.npmmirror.com/@jimp/utils@0.10.3
       core-js: registry.npmmirror.com/core-js@3.30.2
     dev: false
@@ -3196,7 +3196,7 @@ packages:
       '@jimp/custom': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
       '@jimp/utils': registry.npmmirror.com/@jimp/utils@0.10.3
       core-js: registry.npmmirror.com/core-js@3.30.2
     dev: false
@@ -3210,7 +3210,7 @@ packages:
       '@jimp/custom': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
       '@jimp/utils': registry.npmmirror.com/@jimp/utils@0.10.3
       core-js: registry.npmmirror.com/core-js@3.30.2
     dev: false
@@ -3224,7 +3224,7 @@ packages:
       '@jimp/custom': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
       '@jimp/utils': registry.npmmirror.com/@jimp/utils@0.10.3
       core-js: registry.npmmirror.com/core-js@3.30.2
     dev: false
@@ -3238,7 +3238,7 @@ packages:
       '@jimp/custom': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
       '@jimp/utils': registry.npmmirror.com/@jimp/utils@0.10.3
       core-js: registry.npmmirror.com/core-js@3.30.2
     dev: false
@@ -3253,8 +3253,8 @@ packages:
       '@jimp/plugin-rotate': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
-      '@jimp/plugin-rotate': registry.npmmirror.com/@jimp/plugin-rotate@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-blit@0.10.3)(@jimp/plugin-crop@0.10.3)(@jimp/plugin-resize@0.10.3)
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
+      '@jimp/plugin-rotate': registry.npmmirror.com/@jimp/plugin-rotate@0.10.3(@jimp/single-custom@0.10.3)(@jimp/plugin-blit@0.10.3)(@jimp/plugin-crop@0.10.3)(@jimp/plugin-resize@0.10.3)
       '@jimp/utils': registry.npmmirror.com/@jimp/utils@0.10.3
       core-js: registry.npmmirror.com/core-js@3.30.2
     dev: false
@@ -3268,7 +3268,7 @@ packages:
       '@jimp/custom': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
       '@jimp/utils': registry.npmmirror.com/@jimp/utils@0.10.3
       core-js: registry.npmmirror.com/core-js@3.30.2
     dev: false
@@ -3282,7 +3282,7 @@ packages:
       '@jimp/custom': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
       '@jimp/utils': registry.npmmirror.com/@jimp/utils@0.10.3
       core-js: registry.npmmirror.com/core-js@3.30.2
     dev: false
@@ -3296,7 +3296,7 @@ packages:
       '@jimp/custom': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
       '@jimp/utils': registry.npmmirror.com/@jimp/utils@0.10.3
       core-js: registry.npmmirror.com/core-js@3.30.2
     dev: false
@@ -3310,7 +3310,7 @@ packages:
       '@jimp/custom': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
       '@jimp/utils': registry.npmmirror.com/@jimp/utils@0.10.3
       core-js: registry.npmmirror.com/core-js@3.30.2
     dev: false
@@ -3325,8 +3325,8 @@ packages:
       '@jimp/plugin-blit': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
-      '@jimp/plugin-blit': registry.npmmirror.com/@jimp/plugin-blit@0.10.3(@jimp/custom@0.10.3)
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
+      '@jimp/plugin-blit': registry.npmmirror.com/@jimp/plugin-blit@0.10.3(@jimp/single-custom@0.10.3)
       '@jimp/utils': registry.npmmirror.com/@jimp/utils@0.10.3
       core-js: registry.npmmirror.com/core-js@3.30.2
       load-bmfont: registry.npmmirror.com/load-bmfont@1.4.1
@@ -3341,7 +3341,7 @@ packages:
       '@jimp/custom': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
       '@jimp/utils': registry.npmmirror.com/@jimp/utils@0.10.3
       core-js: registry.npmmirror.com/core-js@3.30.2
     dev: false
@@ -3358,10 +3358,10 @@ packages:
       '@jimp/plugin-resize': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
-      '@jimp/plugin-blit': registry.npmmirror.com/@jimp/plugin-blit@0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-crop': registry.npmmirror.com/@jimp/plugin-crop@0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-resize': registry.npmmirror.com/@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3)
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
+      '@jimp/plugin-blit': registry.npmmirror.com/@jimp/plugin-blit@0.10.3(@jimp/single-custom@0.10.3)
+      '@jimp/plugin-crop': registry.npmmirror.com/@jimp/plugin-crop@0.10.3(@jimp/single-custom@0.10.3)
+      '@jimp/plugin-resize': registry.npmmirror.com/@jimp/plugin-resize@0.10.3(@jimp/single-custom@0.10.3)
       '@jimp/utils': registry.npmmirror.com/@jimp/utils@0.10.3
       core-js: registry.npmmirror.com/core-js@3.30.2
     dev: false
@@ -3376,8 +3376,8 @@ packages:
       '@jimp/plugin-resize': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
-      '@jimp/plugin-resize': registry.npmmirror.com/@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3)
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
+      '@jimp/plugin-resize': registry.npmmirror.com/@jimp/plugin-resize@0.10.3(@jimp/single-custom@0.10.3)
       '@jimp/utils': registry.npmmirror.com/@jimp/utils@0.10.3
       core-js: registry.npmmirror.com/core-js@3.30.2
     dev: false
@@ -3393,9 +3393,9 @@ packages:
       '@jimp/plugin-resize': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
-      '@jimp/plugin-blur': registry.npmmirror.com/@jimp/plugin-blur@0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-resize': registry.npmmirror.com/@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3)
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
+      '@jimp/plugin-blur': registry.npmmirror.com/@jimp/plugin-blur@0.10.3(@jimp/single-custom@0.10.3)
+      '@jimp/plugin-resize': registry.npmmirror.com/@jimp/plugin-resize@0.10.3(@jimp/single-custom@0.10.3)
       '@jimp/utils': registry.npmmirror.com/@jimp/utils@0.10.3
       core-js: registry.npmmirror.com/core-js@3.30.2
     dev: false
@@ -3411,9 +3411,9 @@ packages:
       '@jimp/plugin-resize': '>=0.8.0'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
-      '@jimp/plugin-color': registry.npmmirror.com/@jimp/plugin-color@0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-resize': registry.npmmirror.com/@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3)
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
+      '@jimp/plugin-color': registry.npmmirror.com/@jimp/plugin-color@0.10.3(@jimp/single-custom@0.10.3)
+      '@jimp/plugin-resize': registry.npmmirror.com/@jimp/plugin-resize@0.10.3(@jimp/single-custom@0.10.3)
       '@jimp/utils': registry.npmmirror.com/@jimp/utils@0.10.3
       core-js: registry.npmmirror.com/core-js@3.30.2
     dev: false
@@ -3427,28 +3427,28 @@ packages:
       '@jimp/custom': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
-      '@jimp/plugin-blit': registry.npmmirror.com/@jimp/plugin-blit@0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-blur': registry.npmmirror.com/@jimp/plugin-blur@0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-circle': registry.npmmirror.com/@jimp/plugin-circle@0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-color': registry.npmmirror.com/@jimp/plugin-color@0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-contain': registry.npmmirror.com/@jimp/plugin-contain@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-blit@0.10.3)(@jimp/plugin-resize@0.10.3)(@jimp/plugin-scale@0.10.3)
-      '@jimp/plugin-cover': registry.npmmirror.com/@jimp/plugin-cover@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-crop@0.10.3)(@jimp/plugin-resize@0.10.3)(@jimp/plugin-scale@0.10.3)
-      '@jimp/plugin-crop': registry.npmmirror.com/@jimp/plugin-crop@0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-displace': registry.npmmirror.com/@jimp/plugin-displace@0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-dither': registry.npmmirror.com/@jimp/plugin-dither@0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-fisheye': registry.npmmirror.com/@jimp/plugin-fisheye@0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-flip': registry.npmmirror.com/@jimp/plugin-flip@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-rotate@0.10.3)
-      '@jimp/plugin-gaussian': registry.npmmirror.com/@jimp/plugin-gaussian@0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-invert': registry.npmmirror.com/@jimp/plugin-invert@0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-mask': registry.npmmirror.com/@jimp/plugin-mask@0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-normalize': registry.npmmirror.com/@jimp/plugin-normalize@0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-print': registry.npmmirror.com/@jimp/plugin-print@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-blit@0.10.3)
-      '@jimp/plugin-resize': registry.npmmirror.com/@jimp/plugin-resize@0.10.3(@jimp/custom@0.10.3)
-      '@jimp/plugin-rotate': registry.npmmirror.com/@jimp/plugin-rotate@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-blit@0.10.3)(@jimp/plugin-crop@0.10.3)(@jimp/plugin-resize@0.10.3)
-      '@jimp/plugin-scale': registry.npmmirror.com/@jimp/plugin-scale@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-resize@0.10.3)
-      '@jimp/plugin-shadow': registry.npmmirror.com/@jimp/plugin-shadow@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-blur@0.10.3)(@jimp/plugin-resize@0.10.3)
-      '@jimp/plugin-threshold': registry.npmmirror.com/@jimp/plugin-threshold@0.10.3(@jimp/custom@0.10.3)(@jimp/plugin-color@0.10.3)(@jimp/plugin-resize@0.10.3)
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
+      '@jimp/plugin-blit': registry.npmmirror.com/@jimp/plugin-blit@0.10.3(@jimp/single-custom@0.10.3)
+      '@jimp/plugin-blur': registry.npmmirror.com/@jimp/plugin-blur@0.10.3(@jimp/single-custom@0.10.3)
+      '@jimp/plugin-circle': registry.npmmirror.com/@jimp/plugin-circle@0.10.3(@jimp/single-custom@0.10.3)
+      '@jimp/plugin-color': registry.npmmirror.com/@jimp/plugin-color@0.10.3(@jimp/single-custom@0.10.3)
+      '@jimp/plugin-contain': registry.npmmirror.com/@jimp/plugin-contain@0.10.3(@jimp/single-custom@0.10.3)(@jimp/plugin-blit@0.10.3)(@jimp/plugin-resize@0.10.3)(@jimp/plugin-scale@0.10.3)
+      '@jimp/plugin-cover': registry.npmmirror.com/@jimp/plugin-cover@0.10.3(@jimp/single-custom@0.10.3)(@jimp/plugin-crop@0.10.3)(@jimp/plugin-resize@0.10.3)(@jimp/plugin-scale@0.10.3)
+      '@jimp/plugin-crop': registry.npmmirror.com/@jimp/plugin-crop@0.10.3(@jimp/single-custom@0.10.3)
+      '@jimp/plugin-displace': registry.npmmirror.com/@jimp/plugin-displace@0.10.3(@jimp/single-custom@0.10.3)
+      '@jimp/plugin-dither': registry.npmmirror.com/@jimp/plugin-dither@0.10.3(@jimp/single-custom@0.10.3)
+      '@jimp/plugin-fisheye': registry.npmmirror.com/@jimp/plugin-fisheye@0.10.3(@jimp/single-custom@0.10.3)
+      '@jimp/plugin-flip': registry.npmmirror.com/@jimp/plugin-flip@0.10.3(@jimp/single-custom@0.10.3)(@jimp/plugin-rotate@0.10.3)
+      '@jimp/plugin-gaussian': registry.npmmirror.com/@jimp/plugin-gaussian@0.10.3(@jimp/single-custom@0.10.3)
+      '@jimp/plugin-invert': registry.npmmirror.com/@jimp/plugin-invert@0.10.3(@jimp/single-custom@0.10.3)
+      '@jimp/plugin-mask': registry.npmmirror.com/@jimp/plugin-mask@0.10.3(@jimp/single-custom@0.10.3)
+      '@jimp/plugin-normalize': registry.npmmirror.com/@jimp/plugin-normalize@0.10.3(@jimp/single-custom@0.10.3)
+      '@jimp/plugin-print': registry.npmmirror.com/@jimp/plugin-print@0.10.3(@jimp/single-custom@0.10.3)(@jimp/plugin-blit@0.10.3)
+      '@jimp/plugin-resize': registry.npmmirror.com/@jimp/plugin-resize@0.10.3(@jimp/single-custom@0.10.3)
+      '@jimp/plugin-rotate': registry.npmmirror.com/@jimp/plugin-rotate@0.10.3(@jimp/single-custom@0.10.3)(@jimp/plugin-blit@0.10.3)(@jimp/plugin-crop@0.10.3)(@jimp/plugin-resize@0.10.3)
+      '@jimp/plugin-scale': registry.npmmirror.com/@jimp/plugin-scale@0.10.3(@jimp/single-custom@0.10.3)(@jimp/plugin-resize@0.10.3)
+      '@jimp/plugin-shadow': registry.npmmirror.com/@jimp/plugin-shadow@0.10.3(@jimp/single-custom@0.10.3)(@jimp/plugin-blur@0.10.3)(@jimp/plugin-resize@0.10.3)
+      '@jimp/plugin-threshold': registry.npmmirror.com/@jimp/plugin-threshold@0.10.3(@jimp/single-custom@0.10.3)(@jimp/plugin-color@0.10.3)(@jimp/plugin-resize@0.10.3)
       core-js: registry.npmmirror.com/core-js@3.30.2
       timm: registry.npmmirror.com/timm@1.7.1
     dev: false
@@ -3462,7 +3462,7 @@ packages:
       '@jimp/custom': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
       '@jimp/utils': registry.npmmirror.com/@jimp/utils@0.10.3
       core-js: registry.npmmirror.com/core-js@3.30.2
       pngjs: registry.npmmirror.com/pngjs@3.4.0
@@ -3477,7 +3477,7 @@ packages:
       '@jimp/custom': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
       core-js: registry.npmmirror.com/core-js@3.30.2
       utif: registry.npmmirror.com/utif@2.0.1
     dev: false
@@ -3491,12 +3491,12 @@ packages:
       '@jimp/custom': '>=0.3.5'
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/bmp': registry.npmmirror.com/@jimp/bmp@0.10.3(@jimp/custom@0.10.3)
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
-      '@jimp/gif': registry.npmmirror.com/@jimp/gif@0.10.3(@jimp/custom@0.10.3)
-      '@jimp/jpeg': registry.npmmirror.com/@jimp/jpeg@0.10.3(@jimp/custom@0.10.3)
-      '@jimp/png': registry.npmmirror.com/@jimp/png@0.10.3(@jimp/custom@0.10.3)
-      '@jimp/tiff': registry.npmmirror.com/@jimp/tiff@0.10.3(@jimp/custom@0.10.3)
+      '@jimp/bmp': registry.npmmirror.com/@jimp/bmp@0.10.3(@jimp/single-custom@0.10.3)
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
+      '@jimp/gif': registry.npmmirror.com/@jimp/gif@0.10.3(@jimp/single-custom@0.10.3)
+      '@jimp/jpeg': registry.npmmirror.com/@jimp/jpeg@0.10.3(@jimp/single-custom@0.10.3)
+      '@jimp/png': registry.npmmirror.com/@jimp/png@0.10.3(@jimp/single-custom@0.10.3)
+      '@jimp/tiff': registry.npmmirror.com/@jimp/tiff@0.10.3(@jimp/single-custom@0.10.3)
       core-js: registry.npmmirror.com/core-js@3.30.2
       timm: registry.npmmirror.com/timm@1.7.1
     dev: false
@@ -5855,7 +5855,7 @@ packages:
 
   registry.npmmirror.com/is-potential-custom-element-name@1.0.1:
     resolution: {integrity: sha512-bCYeRA2rVibKZd+s2625gGnGF/t7DSqDs4dP7CrLA1m7jKWz6pps0LpYLJN8Q64HtmPKJ1hrN3nzPNKFEKOUiQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/is-potential-custom-element-name/-/is-potential-custom-element-name-1.0.1.tgz}
-    name: is-potential-custom-element-name
+    name: is-potential-single-custom-element-name
     version: 1.0.1
     dev: true
 
@@ -6465,9 +6465,9 @@ packages:
     version: 0.10.3
     dependencies:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.3
-      '@jimp/custom': registry.npmmirror.com/@jimp/custom@0.10.3
-      '@jimp/plugins': registry.npmmirror.com/@jimp/plugins@0.10.3(@jimp/custom@0.10.3)
-      '@jimp/types': registry.npmmirror.com/@jimp/types@0.10.3(@jimp/custom@0.10.3)
+      '@jimp/custom': registry.npmmirror.com/@jimp/single-custom@0.10.3
+      '@jimp/plugins': registry.npmmirror.com/@jimp/plugins@0.10.3(@jimp/single-custom@0.10.3)
+      '@jimp/types': registry.npmmirror.com/@jimp/types@0.10.3(@jimp/single-custom@0.10.3)
       core-js: registry.npmmirror.com/core-js@3.30.2
       regenerator-runtime: registry.npmmirror.com/regenerator-runtime@0.13.11
     dev: false
@@ -6517,7 +6517,7 @@ packages:
       html-encoding-sniffer: registry.npmmirror.com/html-encoding-sniffer@2.0.1
       http-proxy-agent: registry.npmmirror.com/http-proxy-agent@4.0.1
       https-proxy-agent: registry.npmmirror.com/https-proxy-agent@5.0.1
-      is-potential-custom-element-name: registry.npmmirror.com/is-potential-custom-element-name@1.0.1
+      is-potential-custom-element-name: registry.npmmirror.com/is-potential-single-custom-element-name@1.0.1
       nwsapi: registry.npmmirror.com/nwsapi@2.2.5
       parse5: registry.npmmirror.com/parse5@6.0.1
       saxes: registry.npmmirror.com/saxes@5.0.1

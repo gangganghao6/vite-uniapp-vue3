@@ -46,3 +46,65 @@ export const useStore = defineStore("store", {
     ],
   }),
 });
+export const useGoods = defineStore("goods", {
+  state: () => ({
+    currentGoods: {
+      id: 1,
+      name: "商品1",
+      price: 10,
+      type: {
+        id: 1,
+        name: "商品类别1",
+      },
+      custom: [
+        {
+          id: 1,
+          name: "商品定制选项1",
+          price: 10,
+          isOnly: false,
+          category: {
+            id: 1,
+            name: "种类类别1",
+          },
+        },
+        {
+          id: 2,
+          name: "商品定制选项2",
+          price: 10,
+          isOnly: false,
+          category: {
+            id: 1,
+            name: "种类类别1",
+          },
+        },
+        {
+          id: 3,
+          name: "商品定制选项3",
+          price: 10,
+          isOnly: true,
+          category: {
+            id: 1,
+            name: "种类类别2",
+          },
+        },
+        {
+          id: 4,
+          name: "商品定制选项4",
+          price: 10,
+          isOnly: true,
+          category: {
+            id: 1,
+            name: "种类类别2",
+          },
+        },
+      ],
+      src: "/static/logo.png",
+      isEmpty: false,
+      isPackage: false,
+      haveCustom: true,
+      haveVipDiscount: true,
+      haveChuzhiDiscount: true,
+    },
+    showPopup: true,
+  }),
+});

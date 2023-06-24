@@ -30,6 +30,7 @@ function onWaisong() {
 </template>
 
 <style lang="scss">
+@import "src/uni.scss";
 .container {
   margin: 20rpx 0 0 30rpx;
   display: flex;
@@ -55,7 +56,7 @@ function onWaisong() {
 }
 
 .selected {
-  background-color: rgb(230, 0, 0);
+  background-color: $main-color;
   color: white !important;
 }
 </style>

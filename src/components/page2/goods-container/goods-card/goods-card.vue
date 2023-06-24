@@ -1,22 +1,22 @@
-<script setup></script>
+<script setup>
+import { useGoods } from "../../../../stores/store";
+import { storeToRefs } from "pinia";
+import Vip from "../../../tags/vip.vue";
+import Chuzhi from "../../../tags/chuzhi.vue";
+
+const { showPopup } = storeToRefs(useGoods());
+</script>
 
 <template>
   <view class="container">
     <image class="image" src="../../static/logo.png" />
     <view class="detail-container">
-      <view class="detail name">火山烧烤脆翅尖（5个装）</view>
-      <view class="detail vip">
-        <van-icon class="vip-icon" name="vip-card-o" />
-        <view>VIP卡享</view>
-        <view class="vip-price">￥10.44</view>
-      </view>
-      <view class="detail chuzhi">
-        <view class="chuzhi-price">￥10.44</view>
-        <view class="chuzhi-text">储值享</view>
-      </view>
+      <view class="detail name"> 火山烧烤脆翅尖（5个装） </view>
+      <vip :custom-style="{ margin: '10rpx 20rpx 10rpx 20rpx' }" />
+      <chuzhi :custom-style="{ margin: '10rpx 20rpx 10rpx 20rpx' }" />
       <view class="detail price-but">
         <view class="price">￥10.44</view>
-        <view class="button">选规格</view>
+        <view class="button" @click="showPopup = true">选规格</view>
       </view>
     </view>
   </view>
@@ -60,56 +60,15 @@
       line-height: 30rpx;
     }
 
-    .vip {
-      background-color: rgb(255, 220, 152);
-      font-size: 18rpx;
-      font-weight: bold;
-      border-radius: 30rpx;
-      padding-left: 10rpx;
-      display: flex;
-      width: 50%;
-      line-height: 30rpx;
-      justify-content: left;
-      align-items: center;
-
-      .vip-icon {
-        margin-right: 6rpx;
-      }
-
-      .vip-price {
-        color: red;
-      }
-    }
-
-    .chuzhi {
-      display: flex;
-      font-size: 18rpx;
-
-      .chuzhi-price {
-        color: rgb(255, 84, 134);
-        border: 1rpx solid rgb(255, 84, 134);
-      }
-
-      .chuzhi-text {
-        color: white;
-        background-color: rgb(255, 84, 134);
-        border: 1rpx solid rgb(255, 84, 134);
-      }
-
-      .chuzhi-price,
-      .chuzhi-text {
-        line-height: 30rpx;
-        padding: 0 4rpx 0 4rpx;
-      }
-    }
-
     .price-but {
       display: flex;
       justify-content: space-between;
+
       .price {
         font-size: 28rpx;
         font-weight: bold;
       }
+
       .button {
         height: 40rpx;
         width: 100rpx;

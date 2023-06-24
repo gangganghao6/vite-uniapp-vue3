@@ -2,6 +2,7 @@
 import OrderLocation from "./order-location/order-location.vue";
 import GoodsType from "./goods-type/goods-type.vue";
 import GoodsContainer from "./goods-container/goods-container.vue";
+import GoodsDetail from "../goods-detail/goods-detail.vue";
 </script>
 
 <template>
@@ -17,12 +18,8 @@ import GoodsContainer from "./goods-container/goods-container.vue";
       <goods-container />
       <goods-container />
       <goods-container />
-      <goods-container />
-      <goods-container />
-      <goods-container />
-      <goods-container />
-      <goods-container />
     </view>
+    <goods-detail />
   </view>
 </template>
 

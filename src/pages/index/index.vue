@@ -2,7 +2,6 @@
 import { usePage, useMapLocation } from "../../stores/store";
 import { storeToRefs } from "pinia";
 import { onLoad } from "@dcloudio/uni-app";
-import GoodsPackageDetail from "../goods-package-detail/goods-package-detail.vue";
 
 const currentPage = usePage();
 const { page } = storeToRefs(currentPage);
@@ -57,5 +56,6 @@ const onSwitch = (e) => {
     <van-tabbar-item icon="user-o" info="20" :name="4">我的</van-tabbar-item>
   </van-tabbar>
   <!--  <goods-package-detail />-->
+  <van-toast id="van-toast" />
 </template>
 <style lang="scss"></style>

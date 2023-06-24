@@ -37,7 +37,7 @@ const onClose = () => {
 <style scoped lang="scss">
 .container {
   .title {
-    font-size: large;
+    font-size: 38rpx;
     font-weight: bold;
     text-align: center;
     margin-top: 20rpx;

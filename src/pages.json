@@ -50,7 +50,8 @@
       "van-icon": "/wxcomponents/dist/icon/index",
       "van-sidebar": "/wxcomponents/dist/sidebar/index",
       "van-sidebar-item": "/wxcomponents/dist/sidebar-item/index",
-      "van-sticky": "/wxcomponents/dist/sticky/index"
+      "van-sticky": "/wxcomponents/dist/sticky/index",
+      "van-toast": "/wxcomponents/dist/toast/index"
     }
   },
   "renderer": "skyline",

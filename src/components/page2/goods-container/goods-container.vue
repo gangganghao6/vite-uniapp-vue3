@@ -4,6 +4,9 @@ import GoodsCard from "./goods-card/goods-card.vue";
 
 <template>
   <goods-card />
+  <goods-card />
+  <goods-card />
+  <goods-card />
 </template>
 
 <style scoped lang="scss"></style>
